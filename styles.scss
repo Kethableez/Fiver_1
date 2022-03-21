@@ -31,135 +31,423 @@ root {
   padding: 0;
 }
 
-input {
-  font-size: 2rem;
-  font-family: "Quicksand", sans-serif;
-}
-
-.background-gradient-1 {
-  display: flex;
-  flex-direction: column;
-  justify-content:space-between;
-  align-items: center;
-  height: 100%;
-  background: $gradient_1;
-  font-size: 1.5rem;
-}
-
-.logo {
-  height: 40rem;
-  object-fit: fill;
-}
-
-.box {
-  background-color: rgba($color: #ffffff, $alpha: 0.77);
-  width: 85%;
-}
-
-.box-short {
-  background-color: rgba($color: #ffffff, $alpha: 0.77);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: stretch;
-}
-
-.pd {
-  padding: 7rem 0;
-}
-
-.header {
-  font-size: 4rem;
-  margin: 0 1.5rem;
-}
-
-.content {
-  font-size: 2rem;
-  width: 30rem;
-  margin: 0 1.5rem;
-}
-
-.container {
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: stretch;
-}
-
-.img {
-  position: relative;
-  width: 15%;
-  height: 25rem;
-
-}
-
-.ig-logo {
-  width: 25rem;
-  height: 25rem;
-  object-fit: fill;
-  position: absolute;
-  right: 50;
-}
-
-.icon {
-  width: 4rem;
-  height: 4rem;
-}
-
-
-.aleo {
-  font-family: "Aleo", serif;
-}
-
-.monsterrat {
-  font-family: "Montserrat", sans-serif;
-}
-
-.quicksand {
-  font-family: "Quicksand", sans-serif;
-}
-
-.button-dark {
-  font-size: 4rem;
-  font-weight: bold;
-  color: $white;
-  text-decoration: underline;
-  background-color: #000000;
-  width: fit-content;
-  height: fit-content;
-  cursor: pointer;
-  padding: 0.75rem 2rem;
-
-}
-
-.button-md {
-  margin-top: 4rem;
-}
-
-.button-light {
-  font-size: 4rem;
-  font-weight: bold;
-  color: $black;
-  text-decoration: underline;
-  width: fit-content;
-  height: fit-content;
-  padding: 0.75rem 2rem;
-  cursor: pointer;
-}
-
-.spacer {
-  height: 5rem;
-  width: 10%;
-}
-
 // Page 1
+.page-1 {
+  background-image: url("assets/gradient-01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-position: center;
+
+  @media screen and (orientation: portrait){
+    .text-bold {
+      font-family: "Quicksand", sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 3em;
+    }
+    
+    .text {
+      font-family: "Quicksand", sans-serif;
+      font-size: 2em;
+    }
+  }
+
+  @media screen and (orientation: landscape){
+    .text-bold {
+      font-family: "Quicksand", sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    
+    .text {
+      font-family: "Quicksand", sans-serif;
+      font-size: 2rem;
+    }
+  }
+
+  .button {
+    text-decoration: underline;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    .app-logo {
+      width: 100%;
+      height: 35%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .logo {
+        height: 100%;
+      }
+    }
+    .app-info {
+      width: 100%;
+      height: 65%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .container-top {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 1em 0;
+        
+        .description {
+          background-color: rgba($color: #ffffff, $alpha: 0.77);
+          padding: 4em 0;
+          width: 80%;
+
+
+          .margin {
+            margin: 0 2rem;
+          }
+
+          .text {
+            width: 70%;
+          }
+
+          .button {
+            margin-top: 1.5em;
+            background-color: #000000;
+            color: #fff;
+            padding: .25em .5em;
+            width: fit-content;
+            cursor: pointer;
+            font-family: "Quicksand", sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
+          }
+        }
+
+        .picture {
+          position: relative;
+          width: 20%;
+          height: 20rem;
+
+          .image {
+            position: absolute;
+            height: 20rem;
+            transform: translate(-50%);
+          }
+        }
+      }
+
+      .container-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        width: 100%;
+        margin: 1em 0;
+
+
+        .button {
+          background-color: rgba($color: #ffffff, $alpha: 0.77);
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          width: fit-content;
+          padding: .5em .5em;
+          cursor: pointer;
+
+
+          .text-bold {
+            margin: .25em .5em;
+          }
+
+          .icon {
+            width: 4.5rem;
+            height: 4.5rem;
+          }
+        }
+      }
+    }
+  }
+
+
+}
 
 // Page 2
+.page-2 {
+  background-image: url("assets/gradient-01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-position: center;
+
+  @media screen and (orientation: portrait) {
+    .text-bold {
+      font-family: "Quicksand", sans-serif;
+      font-weight: bold;
+      font-size: 3vh;
+    }
+
+    .text-bold-input {
+      font-family: "Quicksand", sans-serif;
+      font-weight: bold;
+      font-size: 3vh;
+
+    }
+
+    .button {
+      width: 15vw;
+      height: 15vw;
+    }
+
+    .box-buttons {
+      height: 50%;
+
+    }
+
+    .box-form {
+      height: 50%;
+
+    }
+
+    .submit-icon {
+      fill: white;
+        width: 10vh;
+        height: 10vh;
+      }
+  }
+
+  @media screen and (orientation: landscape){
+    .text-bold {
+      font-family: "Quicksand", sans-serif;
+      font-weight: bold;
+      font-size: 3vw;
+
+    }
+
+    .text-bold-input {
+      font-family: "Quicksand", sans-serif;
+      font-weight: bold;
+      font-size: 2vw;
+    }
+
+    .button {
+      width: 15vh;
+      height: 15vh;
+    }
+
+    .box-buttons {
+      max-height: 50%;
+
+    }
+
+    .box-form {
+      min-height: 50%;
+
+    }
+
+    .submit-icon {
+      fill: white;
+        width: 10vw;
+        height: 10vw;
+      }
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex; 
+    flex-direction: column;
+  }
+
+  .box-buttons {
+    width: 100%;
+    background-color: $white;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .control {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .button {
+        cursor: pointer;
+        margin: .5em 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        border-radius: 100rem;
+
+        .icon {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+
+      .primary {
+        background-color: #5c2d61;
+
+        }
+
+        .secondary {
+          background-color: #d49384;
+        }
+
+      .label {
+        font-weight: bold;
+      }
+    }
+  }
+  .box-form {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .input {
+      height: fit-content;
+      input,textarea {
+        padding: .25em .5em;
+        width: 100%;
+        background-color: unset;
+        outline: unset;
+        color: white;
+        font-weight: bold;
+        border: none;
+      }
+      input {
+        flex-grow: 1;
+        border-bottom: .5rem solid white;
+      }
+
+      textarea {
+        flex-grow: 1;
+        resize: none;
+      }
+
+      input::placeholder, textarea::placeholder {
+        color: white;
+      }
+    }
+  }
+
+  .submit-button {
+    color: white;
+    position: absolute;
+    bottom: 10;
+    right: 20;
+
+    .submit-icon {
+    fill: white;
+    }
+  }
+}
 
 // Page 3
 .page-3 {
+  @media screen and (orientation: portrait) {
+    .text-bold {
+      font-family: "Quicksand", sans-serif;
+      font-weight: bold;
+      font-size: 3vh;
+    }
+
+    .text-bold-input {
+      font-family: "Quicksand", sans-serif;
+      font-weight: bold;
+      font-size: 3vh;
+    }
+
+    .logo {
+      height: 20rem;
+    }
+
+    input {
+      font-size: 3vh;
+      height: fit-content;
+      border: none;
+      outline: none;
+      width: 100%;
+
+      border-bottom: .75rem dotted $black;
+    }
+
+    input:focus {
+      width: 100%;
+      outline: none;
+      border: none;
+      border-bottom: .75rem dotted $black;
+    }
+
+    .control {
+      margin: 2rem 0;
+      width: 80%;
+      .label {
+        margin: 2rem 0;
+      }
+    }
+  }
+
+  @media screen and (orientation: landscape){
+    .text-bold {
+      font-family: "Quicksand", sans-serif;
+      font-weight: bold;
+      font-size: 3vw;
+    }
+
+    .logo {
+      height: 10rem;
+    }
+
+    .text-bold-input {
+      font-family: "Quicksand", sans-serif;
+      font-weight: bold;
+      font-size: 2vw;
+    }
+
+    .control {
+      margin: 1rem 0;
+      width: 80%;
+      .label {
+        margin: 2rem 0;
+      }
+    }
+
+    input {
+      font-size: 2vw;
+      height: fit-content;
+      border: none;
+      outline: none;
+      width: 100%;
+
+      border-bottom: .25rem dotted $black;
+    }
+
+    input:focus {
+      width: 100%;
+      outline: none;
+      border: none;
+      border-bottom: .25rem dotted $black;
+    }
+  }
+
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,7 +475,6 @@ input {
   }
 
   .logo {
-    height: 20rem;
     object-fit: fill;
   }
 
@@ -196,35 +483,8 @@ input {
     text-decoration: underline;
   }
 
-  .control {
-    margin: 2rem 0;
-    width: 80%;
-    .label {
-      margin: 2rem 0;
-      font-weight: bold;
-    }
-
-    input {
-      font-size: 3rem;
-      height: fit-content;
-      border: none;
-      outline: none;
-      width: 100%;
-
-      border-bottom: .75rem dotted $black;
-    }
-
-    input:focus {
-      width: 100%;
-      outline: none;
-      border: none;
-      border-bottom: .75rem dotted $black;
-
-    }
-  }
   .button {
     width: 80%;
-    padding: 0 3rem;
     text-align: right;
     font-weight: bold;
     text-decoration: underline;
@@ -234,6 +494,89 @@ input {
 
 // Page 4
 .page-4 {
+  @media screen and (orientation: portrait) {
+    .text-bold {
+      font-family: "Quicksand", sans-serif;
+      font-weight: bold;
+      font-size: 3vh;
+    }
+
+    .link-bold {
+      font-family: "Quicksand", sans-serif;
+      font-weight: bold;
+      font-size: 2vh;
+    }
+
+    .logo {
+      height: 20rem;
+    }
+
+    .input {
+      font-size: 3vh;
+      height: fit-content;
+      border: none;
+      outline: none;
+      width: 100%;
+
+      border-bottom: .75rem dotted $black;
+    }
+
+    .icon {
+      cursor: pointer;
+      width: 4vh;
+    }
+
+    .control {
+      margin: 2rem 0;
+      width: 80%;
+      .label {
+        margin: 2rem 0;
+      }
+    }
+  }
+
+  @media screen and (orientation: landscape){
+    .text-bold {
+      font-family: "Quicksand", sans-serif;
+      font-weight: bold;
+      font-size: 3vw;
+    }
+
+    .link-bold {
+      font-family: "Quicksand", sans-serif;
+      font-weight: bold;
+      font-size: 2vw;
+    }
+
+    .logo {
+      height: 10rem;
+    }
+
+    
+    .icon {
+      cursor: pointer;
+      width: 4vw;
+    }
+
+    .control {
+      margin: 1rem 0;
+      width: 80%;
+      .label {
+        margin: 1rem 0;
+      }
+    }
+
+    .input {
+      font-size: 2vw;
+      height: fit-content;
+      border: none;
+      outline: none;
+      width: 100%;
+
+      border-bottom: .25rem dotted $black;
+    }
+  }
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -261,13 +604,15 @@ input {
   }
 
   .link {
-    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     font-weight: bold;
     font-style: italic;
   }
   
   .logo {
-    height: 20rem;
     object-fit: fill;
   }
 
@@ -280,21 +625,9 @@ input {
     margin: 2rem 0;
     width: 80%;
     .label {
-      margin: 2rem 0;
       font-weight: bold;
     }
 
-    .input {
-      margin: 2rem 0;
-      font-weight: bold;
-      font-size: 3rem;
-      height: fit-content;
-      border: none;
-      outline: none;
-      width: 60%;
-
-      border-bottom: .75rem dotted $black;
-    }
   }
   .button {
     width: 80%;
@@ -306,8 +639,186 @@ input {
   }
 }
 
-// Page 5
+// Page 5, 7
 .page-5, .page-7 {
+  @media screen and (orientation: portrait) {
+    .text-bold {
+      font-family: "Quicksand", sans-serif;
+      font-weight: bold;
+      font-size: 3vh;
+    }
+
+    .box-info {
+      border-top: 5px solid black;
+    }
+
+    .logo {
+      height: 20rem;
+    }
+
+    input {
+      width: 100%;
+      font-size: 3vh;
+      border-radius: 100rem;
+      border: none;
+      outline: none;
+      padding: 1rem;
+      background-color: #655da3;
+      color: $white;
+    }
+
+    .icon {
+      cursor: pointer;
+      width: 4vh;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      font-weight: bold;
+      justify-content: end;
+      align-items: center;
+      margin: 1rem 0;
+
+
+      .button {
+        border-radius: 100rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: $gradient_start;
+        color: $white;
+        padding: 1rem 2rem;
+        margin: .5rem 1rem;
+      }
+      .discard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 6vh;
+        height: 6vh;
+        
+
+        margin: .5rem 1rem;
+        border-radius: 100rem;
+        border: none;
+        outline: none;
+        background-color: #655da3;
+        color: $white;
+
+        .icon {
+          fill: #fff;
+        }
+      }
+    }
+
+    .control {
+      width: 100%;
+      .label {
+        margin: 2rem 0;
+      }
+    }
+
+    .container {
+      flex-direction: column;
+      height: 90%;
+      justify-content: space-evenly;
+      align-items: flex-start;
+    }
+  }
+
+  @media screen and (orientation: landscape){
+
+    .box-info {
+      margin: 1rem;
+    }
+
+    .container {
+      flex-direction: row;
+      height: 90%;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .text-bold {
+      font-family: "Quicksand", sans-serif;
+      font-weight: bold;
+      font-size: 3vw;
+    }
+
+    .logo {
+      height: 10rem;
+    }
+
+    
+    .icon {
+      cursor: pointer;
+      width: 4vw;
+    }
+
+
+
+    .control {
+      width: 100%;
+
+      .label {
+        margin: 1rem 0;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      font-weight: bold;
+      justify-content: end;
+      align-items: center;
+      margin: 1rem 0;
+
+
+      .button {
+        border-radius: 100rem;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        background-color: $gradient_start;
+        color: $white;
+        padding: 1rem 2rem;
+        margin: .5rem 1rem;
+      }
+      .discard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 6vw;
+        height: 6vw;
+        margin: .5rem 1rem;
+        border-radius: 100rem;
+        border: none;
+        outline: none;
+        background-color: #655da3;
+        color: $white;
+
+        .icon {
+          fill: #fff;
+        }
+      }
+    }
+
+    input {
+      width: 100%;
+      font-size: 3vw;
+
+      border-radius: 100rem;
+      border: none;
+      outline: none;
+      padding: 1rem;
+      background-color: #655da3;
+      color: $white;
+    }
+  }
+
+
   display: flex;
   justify-content: start;
   align-items: stretch;
@@ -316,71 +827,21 @@ input {
   }
 
   .container{
-    font-size: 3rem;
     display: flex;
-    height: 90%;
-
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
 
 
     .box-form {
       width: 90%;
-      margin: 8rem auto;
+      margin: 3rem;
       .control {
         .label {
           font-weight: bold;
           margin: 1rem 0;
         }
-
-        input {
-          width: 100%;
-          font-size: 3rem;
-          border-radius: 100rem;
-          border: none;
-          outline: none;
-          padding: 1rem;
-          background-color: #655da3;
-          color: $white;
-        }
-      }
-
-      .buttons {
-        display: flex;
-        flex-direction: row;
-        font-weight: bold;
-        justify-content: end;
-        margin: 1rem 0;
-    font-size: 2rem;
-
-
-        .button {
-          border-radius: 100rem;
-          border: none;
-          outline: none;
-          background-color: $gradient_start;
-          color: $white;
-          padding: 1rem 2rem;
-          margin: .5rem 1rem;
-        }
-        .discard {
-        font-size: 3rem;
-        text-align: center;
-        margin: .5rem 1rem;
-
-          width: 72px;
-          border-radius: 100rem;
-          border: none;
-          outline: none;
-          background-color: #655da3;
-          color: $white;
-        }
       }
     }
 
     .box-info {
-      border-top: 5px solid black;
       padding: 3rem;
       font-weight: bold;
       width: 70%;
@@ -389,4 +850,85 @@ input {
 }
 
 // Page 6
+
+.page-6 {
+  background-image: url("assets/gradient-01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-position: center;
+
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    .card {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    justify-content: center;
+
+      .username {
+        color: white;
+        font-weight: bold;
+        font-size: 1.5em;
+      }
+
+      .xyz {
+        position: relative;
+        width: 70%;
+        
+        .avatar {
+          top: -50px;
+          left: -50px;
+          position: absolute;
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+          border-radius: 99999px;
+        }
+  
+        .cover {
+          width: 100%;
+          aspect-ratio: 8/8;
+          object-fit: cover;
+          border-radius: 20px;
+        }
+      }
+
+      .price {
+        transform: translate(0,-50px);
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+        background-color: #fff;
+        border-radius: 9999px;
+        padding: .5em 1em;
+        width: fit-content;
+        text-decoration: underline;
+      }
+    }
+
+    .text {
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 1rem;
+      padding: 1em;
+      min-width: 80%;
+
+    }
+    .logo {
+      height: 8rem;
+      object-fit: fill;
+    }
+  }
+
+
+}
 
