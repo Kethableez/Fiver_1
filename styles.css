@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+html,
+body,
+root {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  font-size: 2rem;
+  font-family: "Quicksand", sans-serif;
+}
+
+.background-gradient-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(0deg, #5c2d61 0%, #d49384 50%, #655da3 100%);
+  font-size: 1.5rem;
+}
+
+.logo {
+  height: 40rem;
+  object-fit: fill;
+}
+
+.box {
+  background-color: rgba(255, 255, 255, 0.77);
+  width: 85%;
+}
+
+.box-short {
+  background-color: rgba(255, 255, 255, 0.77);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: stretch;
+}
+
+.pd {
+  padding: 7rem 0;
+}
+
+.header {
+  font-size: 4rem;
+  margin: 0 1.5rem;
+}
+
+.content {
+  font-size: 2rem;
+  width: 30rem;
+  margin: 0 1.5rem;
+}
+
+.container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: stretch;
+}
+
+.img {
+  position: relative;
+  width: 15%;
+  height: 25rem;
+}
+
+.ig-logo {
+  width: 25rem;
+  height: 25rem;
+  object-fit: fill;
+  position: absolute;
+  right: 50;
+}
+
+.icon {
+  width: 4rem;
+  height: 4rem;
+}
+
+.aleo {
+  font-family: "Aleo", serif;
+}
+
+.monsterrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+}
+
+.button-dark {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: underline;
+  background-color: #000000;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+  padding: 0.75rem 2rem;
+}
+
+.button-md {
+  margin-top: 4rem;
+}
+
+.button-light {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: underline;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+}
+
+.spacer {
+  height: 5rem;
+  width: 10%;
+}
+
+.page-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-3 form {
+  width: 90%;
+}
+.page-3 .container {
+  font-size: 3rem;
+  display: flex;
+  height: 90%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-3 .box {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-3 .logo {
+  height: 20rem;
+  object-fit: fill;
+}
+.page-3 .page-title {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.page-3 .control {
+  margin: 2rem 0;
+  width: 80%;
+}
+.page-3 .control .label {
+  margin: 2rem 0;
+  font-weight: bold;
+}
+.page-3 .control input {
+  font-size: 3rem;
+  height: fit-content;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-bottom: 0.75rem dotted #000000;
+}
+.page-3 .control input:focus {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 0.75rem dotted #000000;
+}
+.page-3 .button {
+  width: 80%;
+  padding: 0 3rem;
+  text-align: right;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.page-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-4 form {
+  width: 90%;
+}
+.page-4 .container {
+  font-size: 3rem;
+  display: flex;
+  height: 90%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-4 .box {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-4 .link {
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+}
+.page-4 .logo {
+  height: 20rem;
+  object-fit: fill;
+}
+.page-4 .page-title {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.page-4 .control {
+  margin: 2rem 0;
+  width: 80%;
+}
+.page-4 .control .label {
+  margin: 2rem 0;
+  font-weight: bold;
+}
+.page-4 .control .input {
+  margin: 2rem 0;
+  font-weight: bold;
+  font-size: 3rem;
+  height: fit-content;
+  border: none;
+  outline: none;
+  width: 60%;
+  border-bottom: 0.75rem dotted #000000;
+}
+.page-4 .button {
+  width: 80%;
+  padding: 0 3rem;
+  text-align: right;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.page-5, .page-7 {
+  display: flex;
+  justify-content: start;
+  align-items: stretch;
+}
+.page-5 form, .page-7 form {
+  width: 100%;
+}
+.page-5 .container, .page-7 .container {
+  font-size: 3rem;
+  display: flex;
+  height: 90%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.page-5 .container .box-form, .page-7 .container .box-form {
+  width: 90%;
+  margin: 8rem auto;
+}
+.page-5 .container .box-form .control .label, .page-7 .container .box-form .control .label {
+  font-weight: bold;
+  margin: 1rem 0;
+}
+.page-5 .container .box-form .control input, .page-7 .container .box-form .control input {
+  width: 100%;
+  font-size: 3rem;
+  border-radius: 100rem;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  background-color: #655da3;
+  color: #ffffff;
+}
+.page-5 .container .box-form .buttons, .page-7 .container .box-form .buttons {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  justify-content: end;
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+.page-5 .container .box-form .buttons .button, .page-7 .container .box-form .buttons .button {
+  border-radius: 100rem;
+  border: none;
+  outline: none;
+  background-color: #5c2d61;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  margin: 0.5rem 1rem;
+}
+.page-5 .container .box-form .buttons .discard, .page-7 .container .box-form .buttons .discard {
+  font-size: 3rem;
+  text-align: center;
+  margin: 0.5rem 1rem;
+  width: 72px;
+  border-radius: 100rem;
+  border: none;
+  outline: none;
+  background-color: #655da3;
+  color: #ffffff;
+}
+.page-5 .container .box-info, .page-7 .container .box-info {
+  border-top: 5px solid black;
+  padding: 3rem;
+  font-weight: bold;
+  width: 70%;
+}
+
+/*# sourceMappingURL=styles.css.map */
