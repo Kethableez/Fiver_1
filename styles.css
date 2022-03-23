@@ -688,68 +688,123 @@ root {
   background-size: cover;
   object-position: center;
 }
+@media screen and (orientation: portrait) {
+  .page-6 .text-bold {
+    font-size: 2.25vh;
+  }
+  .page-6 .avatar {
+    width: 20vw;
+    height: 20vw;
+    top: 2vw;
+    left: -2vw;
+  }
+  .page-6 .phantom-avatar {
+    width: 20vw;
+    height: 20vw;
+    top: 0;
+    left: -4vw;
+    border: 2.5vw solid #fff;
+  }
+  .page-6 .cover {
+    height: 70vw;
+    width: 70vw;
+    max-width: 550px;
+    max-height: 600px;
+    border-radius: 5vh;
+    border: 2.5vw solid #fff;
+  }
+  .page-6 .price {
+    padding: 2vw 5vw;
+    transform: translate(0, -5vw);
+  }
+  .page-6 .text {
+    padding: 5vw 4vw;
+  }
+  .page-6 .logo {
+    width: 15vw;
+  }
+}
+@media screen and (orientation: landscape) {
+  .page-6 .text-bold {
+    font-size: 3vh;
+  }
+  .page-6 .avatar {
+    width: 15vh;
+    height: 15vh;
+    top: 2vh;
+    left: -2vh;
+  }
+  .page-6 .phantom-avatar {
+    width: 15vh;
+    height: 15vh;
+    top: 0;
+    left: -4vh;
+    border: 2.5vh solid #fff;
+  }
+  .page-6 .cover {
+    height: 50vh;
+    width: 50vh;
+    border-radius: 5vh;
+    border: 2.5vh solid #fff;
+  }
+  .page-6 .price {
+    padding: 2vh 5vh;
+    transform: translate(0, -5vh);
+  }
+  .page-6 .text {
+    padding: 4vh 3vh;
+  }
+  .page-6 .logo {
+    width: 10vh;
+  }
+}
+.page-6 .text-bold {
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+}
 .page-6 .container {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
 }
-.page-6 .container .card {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.page-6 .username {
+  color: #fff;
 }
-.page-6 .container .card .username {
-  color: white;
-  font-weight: bold;
-  font-size: 1.5em;
-}
-.page-6 .container .card .xyz {
+.page-6 .card {
   position: relative;
-  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-collapse: collapse;
 }
-.page-6 .container .card .xyz .avatar {
-  top: -50px;
-  left: -50px;
+.page-6 .avatar {
   position: absolute;
-  width: 150px;
-  height: 150px;
   object-fit: cover;
-  border-radius: 99999px;
+  border-radius: 150vh;
 }
-.page-6 .container .card .xyz .cover {
-  width: 100%;
-  aspect-ratio: 8/8;
+.page-6 .phantom-avatar {
+  background-color: #ffffff;
+  z-index: -1;
+  position: absolute;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 150vh;
 }
-.page-6 .container .card .price {
-  transform: translate(0, -50px);
-  font-size: 2em;
-  font-weight: bold;
-  text-align: center;
-  background-color: #fff;
-  border-radius: 9999px;
-  padding: 0.5em 1em;
-  width: fit-content;
+.page-6 .cover {
+  object-fit: cover;
+}
+.page-6 .price {
   text-decoration: underline;
-}
-.page-6 .container .text {
-  font-size: 2em;
-  font-weight: bold;
+  background-color: #ffffff;
   text-align: center;
-  background-color: #fff;
-  border-radius: 1rem;
-  padding: 1em;
-  min-width: 80%;
+  border-radius: 5000px;
 }
-.page-6 .container .logo {
-  height: 8rem;
-  object-fit: fill;
+.page-6 .text {
+  background-color: #fff;
+  text-align: center;
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
