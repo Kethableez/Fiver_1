@@ -2,28 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
-$black: #000000;
-$white: #ffffff;
-
-$gradient_start: #5c2d61;
-$gradient_end: #fcd010;
-$button_1: #d49384;
-$button_2: #98779c;
-$input_blue: #655da3;
-
-$gradient_1: linear-gradient(
-  0deg,
-  rgba(92, 45, 97, 1) 0%,
-  rgba(212, 147, 132, 1) 50%,
-  rgba(101, 93, 163, 1) 100%
-);
-$gradient_2: linear-gradient(
-  325deg,
-  rgba(92, 45, 97, 1) 0%,
-  rgba(212, 147, 132, 1) 100%
-);
-
-// fonts: PlaylistScript, Aleo, Montserrat Light, Quicksand, Glacial Indifference
 html,
 body,
 root {
@@ -31,42 +9,42 @@ root {
   padding: 0;
 }
 
-// Page 1
 .page-1 {
   background-image: url("assets/gradient-01.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   object-position: center;
 
-  @media screen and (orientation: portrait){
+  @media screen and (orientation: portrait) {
     .text-bold {
       font-family: "Quicksand", sans-serif;
       text-transform: uppercase;
       font-weight: bold;
       font-size: 3em;
     }
-    
+
     .text {
       font-family: "Quicksand", sans-serif;
       font-size: 2em;
     }
   }
 
-  @media screen and (orientation: landscape){
+  @media screen and (orientation: landscape) {
     .text-bold {
       font-family: "Quicksand", sans-serif;
       text-transform: uppercase;
       font-weight: bold;
       font-size: 2rem;
     }
-    
+
     .text {
       font-family: "Quicksand", sans-serif;
       font-size: 2rem;
     }
   }
 
-  .button {
+  .button-blk,
+  .button-wht {
     text-decoration: underline;
   }
 
@@ -77,113 +55,107 @@ root {
     align-items: center;
     width: 100%;
     height: 100%;
-    .app-logo {
-      width: 100%;
-      height: 35%;
+  }
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+  .app-logo {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-      .logo {
-        height: 100%;
-      }
-    }
-    .app-info {
-      width: 100%;
-      height: 65%;
+  .logo {
+    height: 100%;
+  }
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+  .app-info {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-      .container-top {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin: 1em 0;
-        
-        .description {
-          background-color: rgba($color: #ffffff, $alpha: 0.77);
-          padding: 4em 0;
-          width: 80%;
+  .container-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 1em 0;
+  }
 
+  .button-blk {
+    margin-top: 1.5em;
+    background-color: #000000;
+    color: #fff;
+    padding: 0.25em 0.5em;
+    width: fit-content;
+    cursor: pointer;
+    font-family: "Quicksand", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 
-          .margin {
-            margin: 0 2rem;
-          }
+  .picture {
+    position: relative;
+    width: 20%;
+    height: 20rem;
+  }
 
-          .text {
-            width: 70%;
-          }
+  .image {
+    position: absolute;
+    height: 20rem;
+    transform: translate(-50%);
+  }
 
-          .button {
-            margin-top: 1.5em;
-            background-color: #000000;
-            color: #fff;
-            padding: .25em .5em;
-            width: fit-content;
-            cursor: pointer;
-            font-family: "Quicksand", sans-serif;
-            text-transform: uppercase;
-            font-weight: bold;
-          }
-        }
+  .description {
+    background-color: rgba($color: #ffffff, $alpha: 0.77);
+    padding: 4em 0;
+    width: 80%;
+  }
 
-        .picture {
-          position: relative;
-          width: 20%;
-          height: 20rem;
+  .margin {
+    margin: 0 2rem;
+  }
 
-          .image {
-            position: absolute;
-            height: 20rem;
-            transform: translate(-50%);
-          }
-        }
-      }
+  .text {
+    width: 70%;
+  }
 
-      .container-bottom {
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: flex-start;
-        width: 100%;
-        margin: 1em 0;
+  .container-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    width: 100%;
+    margin: 1em 0;
 
-
-        .button {
-          background-color: rgba($color: #ffffff, $alpha: 0.77);
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          width: fit-content;
-          padding: .5em .5em;
-          cursor: pointer;
-
-
-          .text-bold {
-            margin: .25em .5em;
-          }
-
-          .icon {
-            width: 4.5rem;
-            height: 4.5rem;
-          }
-        }
-      }
+    .text-bold {
+      margin: 0.25em 0.5em;
     }
   }
 
+  .button-wht {
+    background-color: rgba($color: #ffffff, $alpha: 0.77);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 0.5em 0.5em;
+    cursor: pointer;
+  }
 
+  .icon {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
 }
 
-// Page 2
 .page-2 {
   background-image: url("assets/gradient-01.jpg");
   background-repeat: no-repeat;
@@ -201,7 +173,6 @@ root {
       font-family: "Quicksand", sans-serif;
       font-weight: bold;
       font-size: 3vh;
-
     }
 
     .button {
@@ -211,27 +182,24 @@ root {
 
     .box-buttons {
       height: 50%;
-
     }
 
     .box-form {
       height: 50%;
-
     }
 
     .submit-icon {
       fill: white;
-        width: 10vh;
-        height: 10vh;
-      }
+      width: 10vh;
+      height: 10vh;
+    }
   }
 
-  @media screen and (orientation: landscape){
+  @media screen and (orientation: landscape) {
     .text-bold {
       font-family: "Quicksand", sans-serif;
       font-weight: bold;
       font-size: 3vw;
-
     }
 
     .text-bold-input {
@@ -247,120 +215,127 @@ root {
 
     .box-buttons {
       max-height: 50%;
-
     }
 
     .box-form {
       min-height: 50%;
-
     }
 
     .submit-icon {
       fill: white;
-        width: 10vw;
-        height: 10vw;
-      }
+      width: 10vw;
+      height: 10vw;
+    }
   }
 
   .container {
     width: 100%;
     height: 100%;
-    display: flex; 
+    display: flex;
     flex-direction: column;
   }
 
   .box-buttons {
     width: 100%;
-    background-color: $white;
-    display: flex; 
+    background-color: #ffffff;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    .control {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center;
-
-      .button {
-        cursor: pointer;
-        margin: .5em 1em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #ffffff;
-        border-radius: 100rem;
-
-        .icon {
-          width: 4rem;
-          height: 4rem;
-        }
-      }
-
-      .primary {
-        background-color: #5c2d61;
-
-        }
-
-        .secondary {
-          background-color: #d49384;
-        }
-
-      .label {
-        font-weight: bold;
-      }
-    }
   }
+  .control {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .button {
+    cursor: pointer;
+    margin: 0.5em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border-radius: 100rem;
+  }
+
+  .icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .primary {
+    background-color: #5c2d61;
+  }
+
+  .secondary {
+    background-color: #d49384;
+  }
+
+  .label {
+    font-weight: bold;
+  }
+
   .box-form {
     position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
-
-    .input {
-      height: fit-content;
-      input,textarea {
-        padding: .25em .5em;
-        width: 100%;
-        background-color: unset;
-        outline: unset;
-        color: white;
-        font-weight: bold;
-        border: none;
-      }
-      input {
-        flex-grow: 1;
-        border-bottom: .5rem solid white;
-      }
-
-      textarea {
-        flex-grow: 1;
-        resize: none;
-      }
-
-      input::placeholder, textarea::placeholder {
-        color: white;
-      }
-    }
   }
 
-  .submit-button {
+  .input {
+    height: fit-content;
+  }
+
+  input,
+  textarea {
+    padding: 0.25em 0.5em;
+    width: 100%;
+    background-color: unset;
+    outline: unset;
+    color: white;
+    font-weight: bold;
+    border: none;
+  }
+  input {
+    flex-grow: 1;
+    border-bottom: 0.5rem solid white;
+  }
+
+  textarea {
+    flex-grow: 1;
+    resize: none;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: white;
+  }
+
+  button {
+    cursor: pointer;
     color: white;
     position: absolute;
     bottom: 10;
     right: 20;
+    background-color: unset;
+    outline: none;
+    border: none;
+  }
 
-    .submit-icon {
+  .submit-icon {
     fill: white;
-    }
   }
 }
 
-// Page 3
 .page-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   @media screen and (orientation: portrait) {
     .text-bold {
       font-family: "Quicksand", sans-serif;
@@ -385,26 +360,27 @@ root {
       outline: none;
       width: 100%;
 
-      border-bottom: .75rem dotted $black;
+      border-bottom: 0.75rem dotted #000000;
     }
 
     input:focus {
       width: 100%;
       outline: none;
       border: none;
-      border-bottom: .75rem dotted $black;
+      border-bottom: 0.75rem dotted #000000;
     }
 
     .control {
       margin: 2rem 0;
       width: 80%;
-      .label {
-        margin: 2rem 0;
-      }
+    }
+
+    .label {
+      margin: 2rem 0;
     }
   }
 
-  @media screen and (orientation: landscape){
+  @media screen and (orientation: landscape) {
     .text-bold {
       font-family: "Quicksand", sans-serif;
       font-weight: bold;
@@ -424,9 +400,10 @@ root {
     .control {
       margin: 1rem 0;
       width: 80%;
-      .label {
-        margin: 2rem 0;
-      }
+    }
+
+    .label {
+      margin: 2rem 0;
     }
 
     input {
@@ -436,21 +413,16 @@ root {
       outline: none;
       width: 100%;
 
-      border-bottom: .25rem dotted $black;
+      border-bottom: 0.25rem dotted #000000;
     }
 
     input:focus {
       width: 100%;
       outline: none;
       border: none;
-      border-bottom: .25rem dotted $black;
+      border-bottom: 0.25rem dotted #000000;
     }
   }
-
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   form {
     width: 90%;
@@ -470,7 +442,7 @@ root {
     width: 80%;
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -483,16 +455,19 @@ root {
     text-decoration: underline;
   }
 
-  .button {
+  button {
     width: 80%;
     text-align: right;
     font-weight: bold;
     text-decoration: underline;
     cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: unset;
+    cursor: pointer;
   }
 }
 
-// Page 4
 .page-4 {
   @media screen and (orientation: portrait) {
     .text-bold {
@@ -518,7 +493,7 @@ root {
       outline: none;
       width: 100%;
 
-      border-bottom: .75rem dotted $black;
+      border-bottom: 0.75rem dotted #000000;
     }
 
     .icon {
@@ -529,13 +504,14 @@ root {
     .control {
       margin: 2rem 0;
       width: 80%;
-      .label {
-        margin: 2rem 0;
-      }
+    }
+
+    .label {
+      margin: 2rem 0;
     }
   }
 
-  @media screen and (orientation: landscape){
+  @media screen and (orientation: landscape) {
     .text-bold {
       font-family: "Quicksand", sans-serif;
       font-weight: bold;
@@ -552,7 +528,6 @@ root {
       height: 10rem;
     }
 
-    
     .icon {
       cursor: pointer;
       width: 4vw;
@@ -561,9 +536,10 @@ root {
     .control {
       margin: 1rem 0;
       width: 80%;
-      .label {
-        margin: 1rem 0;
-      }
+    }
+
+    .label {
+      margin: 1rem 0;
     }
 
     .input {
@@ -573,7 +549,7 @@ root {
       outline: none;
       width: 100%;
 
-      border-bottom: .25rem dotted $black;
+      border-bottom: 0.25rem dotted #000000;
     }
   }
 
@@ -599,7 +575,7 @@ root {
     width: 80%;
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -611,7 +587,7 @@ root {
     font-weight: bold;
     font-style: italic;
   }
-  
+
   .logo {
     object-fit: fill;
   }
@@ -624,11 +600,12 @@ root {
   .control {
     margin: 2rem 0;
     width: 80%;
-    .label {
-      font-weight: bold;
-    }
-
   }
+
+  .label {
+    font-weight: bold;
+  }
+
   .button {
     width: 80%;
     padding: 0 3rem;
@@ -639,8 +616,12 @@ root {
   }
 }
 
-// Page 5, 7
-.page-5, .page-7 {
+.page-5,
+.page-7 {
+  display: flex;
+  justify-content: start;
+  align-items: stretch;
+
   @media screen and (orientation: portrait) {
     .text-bold {
       font-family: "Quicksand", sans-serif;
@@ -664,7 +645,7 @@ root {
       outline: none;
       padding: 1rem;
       background-color: #655da3;
-      color: $white;
+      color: #ffffff;
     }
 
     .icon {
@@ -679,45 +660,44 @@ root {
       justify-content: end;
       align-items: center;
       margin: 1rem 0;
+    }
 
+    .button {
+      border-radius: 100rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background-color: #5c2d61;
+      color: #ffffff;
+      padding: 1rem 2rem;
+      margin: 0.5rem 1rem;
+    }
+    .discard {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 6vh;
+      height: 6vh;
 
-      .button {
-        border-radius: 100rem;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        background-color: $gradient_start;
-        color: $white;
-        padding: 1rem 2rem;
-        margin: .5rem 1rem;
-      }
-      .discard {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 6vh;
-        height: 6vh;
-        
+      margin: 0.5rem 1rem;
+      border-radius: 100rem;
+      border: none;
+      outline: none;
+      background-color: #655da3;
+      color: #ffffff;
+    }
 
-        margin: .5rem 1rem;
-        border-radius: 100rem;
-        border: none;
-        outline: none;
-        background-color: #655da3;
-        color: $white;
-
-        .icon {
-          fill: #fff;
-        }
-      }
+    .icon {
+      fill: #fff;
     }
 
     .control {
       width: 100%;
-      .label {
-        margin: 2rem 0;
-      }
+    }
+
+    .label {
+      margin: 2rem 0;
     }
 
     .container {
@@ -728,8 +708,7 @@ root {
     }
   }
 
-  @media screen and (orientation: landscape){
-
+  @media screen and (orientation: landscape) {
     .box-info {
       margin: 1rem;
     }
@@ -750,20 +729,17 @@ root {
       height: 10rem;
     }
 
-    
     .icon {
       cursor: pointer;
       width: 4vw;
     }
 
-
-
     .control {
       width: 100%;
+    }
 
-      .label {
-        margin: 1rem 0;
-      }
+    .label {
+      margin: 1rem 0;
     }
 
     .buttons {
@@ -773,36 +749,35 @@ root {
       justify-content: end;
       align-items: center;
       margin: 1rem 0;
+    }
 
+    .button {
+      border-radius: 100rem;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      background-color: #5c2d61;
+      color: #ffffff;
+      padding: 1rem 2rem;
+      margin: 0.5rem 1rem;
+    }
+    .discard {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 6vw;
+      height: 6vw;
+      margin: 0.5rem 1rem;
+      border-radius: 100rem;
+      border: none;
+      outline: none;
+      background-color: #655da3;
+      color: #ffffff;
+    }
 
-      .button {
-        border-radius: 100rem;
-        border: none;
-        cursor: pointer;
-        outline: none;
-        background-color: $gradient_start;
-        color: $white;
-        padding: 1rem 2rem;
-        margin: .5rem 1rem;
-      }
-      .discard {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 6vw;
-        height: 6vw;
-        margin: .5rem 1rem;
-        border-radius: 100rem;
-        border: none;
-        outline: none;
-        background-color: #655da3;
-        color: $white;
-
-        .icon {
-          fill: #fff;
-        }
-      }
+    .icon {
+      fill: #fff;
     }
 
     input {
@@ -814,42 +789,32 @@ root {
       outline: none;
       padding: 1rem;
       background-color: #655da3;
-      color: $white;
+      color: #ffffff;
     }
   }
 
-
-  display: flex;
-  justify-content: start;
-  align-items: stretch;
   form {
     width: 100%;
   }
 
-  .container{
+  .container {
     display: flex;
+  }
+  .box-form {
+    width: 90%;
+    margin: 3rem;
+  }
+  .label {
+    font-weight: bold;
+    margin: 1rem 0;
+  }
 
-
-    .box-form {
-      width: 90%;
-      margin: 3rem;
-      .control {
-        .label {
-          font-weight: bold;
-          margin: 1rem 0;
-        }
-      }
-    }
-
-    .box-info {
-      padding: 3rem;
-      font-weight: bold;
-      width: 70%;
-    }
+  .box-info {
+    padding: 3rem;
+    font-weight: bold;
+    width: 70%;
   }
 }
-
-// Page 6
 
 .page-6 {
   background-image: url("assets/gradient-01.jpg");
@@ -868,7 +833,7 @@ root {
       top: 2vw;
       left: -2vw;
     }
-  
+
     .phantom-avatar {
       width: 20vw;
       height: 20vw;
@@ -876,7 +841,7 @@ root {
       left: -4vw;
       border: 2.5vw solid #fff;
     }
-  
+
     .cover {
       height: 70vw;
       width: 70vw;
@@ -894,7 +859,6 @@ root {
 
     .text {
       padding: 5vw 4vw;
-
     }
 
     .logo {
@@ -913,7 +877,7 @@ root {
       top: 2vh;
       left: -2vh;
     }
-  
+
     .phantom-avatar {
       width: 15vh;
       height: 15vh;
@@ -921,7 +885,7 @@ root {
       left: -4vh;
       border: 2.5vh solid #fff;
     }
-  
+
     .cover {
       height: 50vh;
       width: 50vh;
@@ -932,18 +896,17 @@ root {
     .price {
       padding: 2vh 5vh;
       transform: translate(0, -5vh);
-
     }
 
     .text {
       padding: 4vh 3vh;
-
     }
 
     .logo {
       width: 10vh;
     }
   }
+
   .text-bold {
     font-family: "Quicksand", sans-serif;
     font-weight: bold;
@@ -968,7 +931,6 @@ root {
     justify-content: center;
     align-items: center;
     border-collapse: collapse;
-
   }
 
   .avatar {
@@ -1001,6 +963,4 @@ root {
     text-align: center;
     border-radius: 20px;
   }
-
 }
-

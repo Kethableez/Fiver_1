@@ -38,7 +38,8 @@ root {
     font-size: 2rem;
   }
 }
-.page-1 .button {
+.page-1 .button-blk,
+.page-1 .button-wht {
   text-decoration: underline;
 }
 .page-1 .container {
@@ -49,7 +50,7 @@ root {
   width: 100%;
   height: 100%;
 }
-.page-1 .container .app-logo {
+.page-1 .app-logo {
   width: 100%;
   height: 35%;
   display: flex;
@@ -57,10 +58,10 @@ root {
   justify-content: center;
   align-items: center;
 }
-.page-1 .container .app-logo .logo {
+.page-1 .logo {
   height: 100%;
 }
-.page-1 .container .app-info {
+.page-1 .app-info {
   width: 100%;
   height: 65%;
   display: flex;
@@ -68,7 +69,7 @@ root {
   justify-content: center;
   align-items: center;
 }
-.page-1 .container .app-info .container-top {
+.page-1 .container-top {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -76,18 +77,7 @@ root {
   width: 100%;
   margin: 1em 0;
 }
-.page-1 .container .app-info .container-top .description {
-  background-color: rgba(255, 255, 255, 0.77);
-  padding: 4em 0;
-  width: 80%;
-}
-.page-1 .container .app-info .container-top .description .margin {
-  margin: 0 2rem;
-}
-.page-1 .container .app-info .container-top .description .text {
-  width: 70%;
-}
-.page-1 .container .app-info .container-top .description .button {
+.page-1 .button-blk {
   margin-top: 1.5em;
   background-color: #000000;
   color: #fff;
@@ -98,17 +88,28 @@ root {
   text-transform: uppercase;
   font-weight: bold;
 }
-.page-1 .container .app-info .container-top .picture {
+.page-1 .picture {
   position: relative;
   width: 20%;
   height: 20rem;
 }
-.page-1 .container .app-info .container-top .picture .image {
+.page-1 .image {
   position: absolute;
   height: 20rem;
   transform: translate(-50%);
 }
-.page-1 .container .app-info .container-bottom {
+.page-1 .description {
+  background-color: rgba(255, 255, 255, 0.77);
+  padding: 4em 0;
+  width: 80%;
+}
+.page-1 .margin {
+  margin: 0 2rem;
+}
+.page-1 .text {
+  width: 70%;
+}
+.page-1 .container-bottom {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -116,7 +117,10 @@ root {
   width: 100%;
   margin: 1em 0;
 }
-.page-1 .container .app-info .container-bottom .button {
+.page-1 .container-bottom .text-bold {
+  margin: 0.25em 0.5em;
+}
+.page-1 .button-wht {
   background-color: rgba(255, 255, 255, 0.77);
   display: flex;
   flex-direction: row;
@@ -126,10 +130,7 @@ root {
   padding: 0.5em 0.5em;
   cursor: pointer;
 }
-.page-1 .container .app-info .container-bottom .button .text-bold {
-  margin: 0.25em 0.5em;
-}
-.page-1 .container .app-info .container-bottom .button .icon {
+.page-1 .icon {
   width: 4.5rem;
   height: 4.5rem;
 }
@@ -208,14 +209,14 @@ root {
   justify-content: center;
   align-items: center;
 }
-.page-2 .box-buttons .control {
+.page-2 .control {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
-.page-2 .box-buttons .control .button {
+.page-2 .button {
   cursor: pointer;
   margin: 0.5em 1em;
   display: flex;
@@ -225,17 +226,17 @@ root {
   color: #ffffff;
   border-radius: 100rem;
 }
-.page-2 .box-buttons .control .button .icon {
+.page-2 .icon {
   width: 4rem;
   height: 4rem;
 }
-.page-2 .box-buttons .control .primary {
+.page-2 .primary {
   background-color: #5c2d61;
 }
-.page-2 .box-buttons .control .secondary {
+.page-2 .secondary {
   background-color: #d49384;
 }
-.page-2 .box-buttons .control .label {
+.page-2 .label {
   font-weight: bold;
 }
 .page-2 .box-form {
@@ -244,10 +245,11 @@ root {
   display: flex;
   flex-direction: column;
 }
-.page-2 .box-form .input {
+.page-2 .input {
   height: fit-content;
 }
-.page-2 .box-form .input input, .page-2 .box-form .input textarea {
+.page-2 input,
+.page-2 textarea {
   padding: 0.25em 0.5em;
   width: 100%;
   background-color: unset;
@@ -256,24 +258,29 @@ root {
   font-weight: bold;
   border: none;
 }
-.page-2 .box-form .input input {
+.page-2 input {
   flex-grow: 1;
   border-bottom: 0.5rem solid white;
 }
-.page-2 .box-form .input textarea {
+.page-2 textarea {
   flex-grow: 1;
   resize: none;
 }
-.page-2 .box-form .input input::placeholder, .page-2 .box-form .input textarea::placeholder {
+.page-2 input::placeholder,
+.page-2 textarea::placeholder {
   color: white;
 }
-.page-2 .submit-button {
+.page-2 button {
+  cursor: pointer;
   color: white;
   position: absolute;
   bottom: 10;
   right: 20;
+  background-color: unset;
+  outline: none;
+  border: none;
 }
-.page-2 .submit-button .submit-icon {
+.page-2 .submit-icon {
   fill: white;
 }
 
@@ -314,7 +321,7 @@ root {
     margin: 2rem 0;
     width: 80%;
   }
-  .page-3 .control .label {
+  .page-3 .label {
     margin: 2rem 0;
   }
 }
@@ -336,7 +343,7 @@ root {
     margin: 1rem 0;
     width: 80%;
   }
-  .page-3 .control .label {
+  .page-3 .label {
     margin: 2rem 0;
   }
   .page-3 input {
@@ -379,11 +386,15 @@ root {
   font-weight: bold;
   text-decoration: underline;
 }
-.page-3 .button {
+.page-3 button {
   width: 80%;
   text-align: right;
   font-weight: bold;
   text-decoration: underline;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: unset;
   cursor: pointer;
 }
 
@@ -422,7 +433,7 @@ root {
     margin: 2rem 0;
     width: 80%;
   }
-  .page-4 .control .label {
+  .page-4 .label {
     margin: 2rem 0;
   }
 }
@@ -448,7 +459,7 @@ root {
     margin: 1rem 0;
     width: 80%;
   }
-  .page-4 .control .label {
+  .page-4 .label {
     margin: 1rem 0;
   }
   .page-4 .input {
@@ -497,7 +508,7 @@ root {
   margin: 2rem 0;
   width: 80%;
 }
-.page-4 .control .label {
+.page-4 .label {
   font-weight: bold;
 }
 .page-4 .button {
@@ -509,24 +520,29 @@ root {
   cursor: pointer;
 }
 
-.page-5, .page-7 {
+.page-5,
+.page-7 {
   display: flex;
   justify-content: start;
   align-items: stretch;
 }
 @media screen and (orientation: portrait) {
-  .page-5 .text-bold, .page-7 .text-bold {
+  .page-5 .text-bold,
+.page-7 .text-bold {
     font-family: "Quicksand", sans-serif;
     font-weight: bold;
     font-size: 3vh;
   }
-  .page-5 .box-info, .page-7 .box-info {
+  .page-5 .box-info,
+.page-7 .box-info {
     border-top: 5px solid black;
   }
-  .page-5 .logo, .page-7 .logo {
+  .page-5 .logo,
+.page-7 .logo {
     height: 20rem;
   }
-  .page-5 input, .page-7 input {
+  .page-5 input,
+.page-7 input {
     width: 100%;
     font-size: 3vh;
     border-radius: 100rem;
@@ -536,11 +552,13 @@ root {
     background-color: #655da3;
     color: #ffffff;
   }
-  .page-5 .icon, .page-7 .icon {
+  .page-5 .icon,
+.page-7 .icon {
     cursor: pointer;
     width: 4vh;
   }
-  .page-5 .buttons, .page-7 .buttons {
+  .page-5 .buttons,
+.page-7 .buttons {
     display: flex;
     flex-direction: row;
     font-weight: bold;
@@ -548,7 +566,8 @@ root {
     align-items: center;
     margin: 1rem 0;
   }
-  .page-5 .buttons .button, .page-7 .buttons .button {
+  .page-5 .button,
+.page-7 .button {
     border-radius: 100rem;
     border: none;
     outline: none;
@@ -558,7 +577,8 @@ root {
     padding: 1rem 2rem;
     margin: 0.5rem 1rem;
   }
-  .page-5 .buttons .discard, .page-7 .buttons .discard {
+  .page-5 .discard,
+.page-7 .discard {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -572,16 +592,20 @@ root {
     background-color: #655da3;
     color: #ffffff;
   }
-  .page-5 .buttons .discard .icon, .page-7 .buttons .discard .icon {
+  .page-5 .icon,
+.page-7 .icon {
     fill: #fff;
   }
-  .page-5 .control, .page-7 .control {
+  .page-5 .control,
+.page-7 .control {
     width: 100%;
   }
-  .page-5 .control .label, .page-7 .control .label {
+  .page-5 .label,
+.page-7 .label {
     margin: 2rem 0;
   }
-  .page-5 .container, .page-7 .container {
+  .page-5 .container,
+.page-7 .container {
     flex-direction: column;
     height: 90%;
     justify-content: space-evenly;
@@ -589,34 +613,42 @@ root {
   }
 }
 @media screen and (orientation: landscape) {
-  .page-5 .box-info, .page-7 .box-info {
+  .page-5 .box-info,
+.page-7 .box-info {
     margin: 1rem;
   }
-  .page-5 .container, .page-7 .container {
+  .page-5 .container,
+.page-7 .container {
     flex-direction: row;
     height: 90%;
     justify-content: space-evenly;
     align-items: center;
   }
-  .page-5 .text-bold, .page-7 .text-bold {
+  .page-5 .text-bold,
+.page-7 .text-bold {
     font-family: "Quicksand", sans-serif;
     font-weight: bold;
     font-size: 3vw;
   }
-  .page-5 .logo, .page-7 .logo {
+  .page-5 .logo,
+.page-7 .logo {
     height: 10rem;
   }
-  .page-5 .icon, .page-7 .icon {
+  .page-5 .icon,
+.page-7 .icon {
     cursor: pointer;
     width: 4vw;
   }
-  .page-5 .control, .page-7 .control {
+  .page-5 .control,
+.page-7 .control {
     width: 100%;
   }
-  .page-5 .control .label, .page-7 .control .label {
+  .page-5 .label,
+.page-7 .label {
     margin: 1rem 0;
   }
-  .page-5 .buttons, .page-7 .buttons {
+  .page-5 .buttons,
+.page-7 .buttons {
     display: flex;
     flex-direction: row;
     font-weight: bold;
@@ -624,7 +656,8 @@ root {
     align-items: center;
     margin: 1rem 0;
   }
-  .page-5 .buttons .button, .page-7 .buttons .button {
+  .page-5 .button,
+.page-7 .button {
     border-radius: 100rem;
     border: none;
     cursor: pointer;
@@ -634,7 +667,8 @@ root {
     padding: 1rem 2rem;
     margin: 0.5rem 1rem;
   }
-  .page-5 .buttons .discard, .page-7 .buttons .discard {
+  .page-5 .discard,
+.page-7 .discard {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -648,10 +682,12 @@ root {
     background-color: #655da3;
     color: #ffffff;
   }
-  .page-5 .buttons .discard .icon, .page-7 .buttons .discard .icon {
+  .page-5 .icon,
+.page-7 .icon {
     fill: #fff;
   }
-  .page-5 input, .page-7 input {
+  .page-5 input,
+.page-7 input {
     width: 100%;
     font-size: 3vw;
     border-radius: 100rem;
@@ -662,21 +698,26 @@ root {
     color: #ffffff;
   }
 }
-.page-5 form, .page-7 form {
+.page-5 form,
+.page-7 form {
   width: 100%;
 }
-.page-5 .container, .page-7 .container {
+.page-5 .container,
+.page-7 .container {
   display: flex;
 }
-.page-5 .container .box-form, .page-7 .container .box-form {
+.page-5 .box-form,
+.page-7 .box-form {
   width: 90%;
   margin: 3rem;
 }
-.page-5 .container .box-form .control .label, .page-7 .container .box-form .control .label {
+.page-5 .label,
+.page-7 .label {
   font-weight: bold;
   margin: 1rem 0;
 }
-.page-5 .container .box-info, .page-7 .container .box-info {
+.page-5 .box-info,
+.page-7 .box-info {
   padding: 3rem;
   font-weight: bold;
   width: 70%;
