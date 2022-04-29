@@ -8,6 +8,19 @@ root {
   padding: 0;
 }
 
+.material-symbols-outlined.md-18 {
+  font-size: 18px;
+}
+.material-symbols-outlined.md-24 {
+  font-size: 24px;
+}
+.material-symbols-outlined.md-36 {
+  font-size: 36px;
+}
+.material-symbols-outlined.md-48 {
+  font-size: 48px;
+}
+
 .page-1 {
   background-image: url("assets/gradient-01.jpg");
   background-repeat: no-repeat;
@@ -39,7 +52,6 @@ root {
     font-size: 2rem;
   }
 }
-
 
 .button-blk a:link,
 .button-blk a:visited,
@@ -154,152 +166,96 @@ root {
 }
 
 .page-2 {
-  background-image: url("assets/gradient-01.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  object-position: center;
+  font-size: 2em;
+  font-family: "Quicksand", sans-serif;
 }
-@media screen and (orientation: portrait) {
-  .page-2 .text-bold {
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-    font-size: 3vh;
-  }
-  .page-2 .text-bold-input {
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-    font-size: 3vh;
-  }
-  .page-2 .button {
-    width: 15vw;
-    height: 15vw;
-  }
-  .page-2 .box-buttons {
-    height: 50%;
-  }
-  .page-2 .box-form {
-    height: 50%;
-  }
-  .page-2 .submit-icon {
-    fill: white;
-    width: 10vh;
-    height: 10vh;
-  }
-}
-@media screen and (orientation: landscape) {
-  .page-2 .text-bold {
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-    font-size: 3vw;
-  }
-  .page-2 .text-bold-input {
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-    font-size: 2vw;
-  }
-  .page-2 .button {
-    width: 15vh;
-    height: 15vh;
-  }
-  .page-2 .box-buttons {
-    max-height: 50%;
-  }
-  .page-2 .box-form {
-    min-height: 50%;
-  }
-  .page-2 .submit-icon {
-    fill: white;
-    width: 10vw;
-    height: 10vw;
-  }
-}
+
 .page-2 .container {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-}
-.page-2 .box-buttons {
-  width: 100%;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  height: 100%;
 }
+
+.page-2 .text-bold {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 .page-2 .control {
-  width: 100%;
+  border-radius: 5px;
+  background-color: rgb(141, 134, 184);
   display: flex;
+  width: 80%;
+  padding: 0.7rem 0.5rem;
+
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
-.page-2 .button {
-  cursor: pointer;
-  margin: 0.5em 1em;
+
+.page-2 .controls {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  color: #ffffff;
-  border-radius: 100rem;
+  width: 80%;
 }
+
+.page-2 .file-control {
+  font-size: 1rem;
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 1rem 0.5rem;
+  background-color: #7168a7;
+}
+
 .page-2 .icon {
-  width: 4rem;
-  height: 4rem;
+  color: #fff;
+  margin: 0 0.5rem;
+  font-size: 2.5rem;
 }
-.page-2 .primary {
-  background-color: #5c2d61;
-}
-.page-2 .secondary {
-  background-color: #d49384;
-}
-.page-2 .label {
-  font-weight: bold;
-}
-.page-2 .box-form {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
+
 .page-2 .input {
-  height: fit-content;
-}
-.page-2 input,
-.page-2 textarea {
-  padding: 0.25em 0.5em;
-  width: 100%;
   background-color: unset;
-  outline: unset;
-  color: white;
-  font-weight: bold;
-  border: none;
-}
-.page-2 input {
-  flex-grow: 1;
-  border-bottom: 0.5rem solid white;
-}
-.page-2 textarea {
-  flex-grow: 1;
-  resize: none;
-}
-.page-2 input::placeholder,
-.page-2 textarea::placeholder {
-  color: white;
-}
-.page-2 button {
-  cursor: pointer;
-  color: white;
-  position: absolute;
-  bottom: 10;
-  right: 20;
-  background-color: unset;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: 80%;
+  font-family: "Quicksand", sans-serif;
   outline: none;
   border: none;
 }
-.page-2 .submit-icon {
-  fill: white;
+
+.page-2 button {
+  outline: none;
+  border: none;
+  background-color: unset;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.page-2 .box {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-2 .align-left {
+  align-items: flex-start;
+}
+
+.page-2 .align-right {
+  align-items: flex-end;
+}
+
+@media screen and (orientation: portrait) {
+}
+@media screen and (orientation: landscape) {
 }
 
 .page-3 {
@@ -417,125 +373,161 @@ root {
 }
 
 .page-4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 2em;
+  font-family: "Quicksand", sans-serif;
 }
-@media screen and (orientation: portrait) {
-  .page-4 .text-bold {
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-    font-size: 3vh;
-  }
-  .page-4 .link-bold {
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-    font-size: 2vh;
-  }
-  .page-4 .logo {
-    height: 20rem;
-  }
-  .page-4 .input {
-    font-size: 3vh;
-    height: fit-content;
-    border: none;
-    outline: none;
-    width: 100%;
-    border-bottom: 0.75rem dotted #000000;
-  }
-  .page-4 .icon {
-    cursor: pointer;
-    width: 4vh;
-  }
-  .page-4 .control {
-    margin: 2rem 0;
-    width: 80%;
-  }
-  .page-4 .label {
-    margin: 2rem 0;
-  }
-}
-@media screen and (orientation: landscape) {
-  .page-4 .text-bold {
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-    font-size: 3vw;
-  }
-  .page-4 .link-bold {
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-    font-size: 2vw;
-  }
-  .page-4 .logo {
-    height: 10rem;
-  }
-  .page-4 .icon {
-    cursor: pointer;
-    width: 4vw;
-  }
-  .page-4 .control {
-    margin: 1rem 0;
-    width: 80%;
-  }
-  .page-4 .label {
-    margin: 1rem 0;
-  }
-  .page-4 .input {
-    font-size: 2vw;
-    height: fit-content;
-    border: none;
-    outline: none;
-    width: 100%;
-    border-bottom: 0.25rem dotted #000000;
-  }
-}
-.page-4 form {
-  width: 90%;
-}
+
 .page-4 .container {
-  font-size: 3rem;
   display: flex;
-  height: 90%;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+  height: 100%;
 }
+
+.page-4 .text-bold {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.page-4 .header {
+  font-size: 2rem;
+}
+
+.page-4 button {
+  outline: none;
+  border: none;
+  background-color: unset;
+  cursor: pointer;
+}
+
+.page-4 .underline {
+  text-decoration: underline;
+}
+
+.page-4 .space {
+  height: 2rem;
+}
+
+.page-4 .control {
+  border-radius: 5px;
+  background-color: rgb(141, 134, 184);
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.7rem 0.5rem;
+}
+
+.page-4 .button-2 {
+  background-color: rgb(141, 134, 184);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: "Quicksand", sans-serif;
+  padding: 0.25rem 1rem;
+  width: fit-content;
+}
+
+.center {
+  justify-content: space-evenly;
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.page-4 .white-bold {
+  color: #fff;
+  font-weight: bold;
+}
+
+.page-4 .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  font-size: 1rem;
+}
+
+.row .label {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.7rem;
+  width: 20%;
+}
+
+.box .control {
+  width: 100%;
+}
+
+.page-4 .small {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.7rem;
+  width: fit-content;
+}
+
+.row .link {
+  cursor: pointer;
+}
+
+.row .icon-2 {
+  color: #000;
+  cursor: pointer;
+}
+
+.page-4 .icon {
+  color: #fff;
+  margin: 0 0.5rem;
+  font-size: 2.5rem;
+}
+
+.page-4 .label-2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+  width: fit-content;
+}
+
+.page-4 .input {
+  background-color: unset;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: 80%;
+  font-family: "Quicksand", sans-serif;
+  outline: none;
+  border: none;
+}
+
+.page-4 .hr {
+  border-bottom: 3px solid black;
+  width: 50%;
+  height: 1rem;
+}
+
 .page-4 .box {
   width: 80%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
 }
-.page-4 .link {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
-  font-style: italic;
+
+.page-4 .align-left {
+  align-items: flex-start;
 }
-.page-4 .logo {
-  object-fit: fill;
+
+.page-4 .align-right {
+  align-items: flex-end;
 }
-.page-4 .page-title {
-  font-weight: bold;
-  text-decoration: underline;
+
+@media screen and (orientation: portrait) {
 }
-.page-4 .control {
-  margin: 2rem 0;
-  width: 80%;
-}
-.page-4 .label {
-  font-weight: bold;
-}
-.page-4 .button {
-  width: 80%;
-  padding: 0 3rem;
-  text-align: right;
-  font-weight: bold;
-  text-decoration: underline;
-  cursor: pointer;
+@media screen and (orientation: landscape) {
 }
 
 .page-5,
@@ -546,21 +538,21 @@ root {
 }
 @media screen and (orientation: portrait) {
   .page-5 .text-bold,
-.page-7 .text-bold {
+  .page-7 .text-bold {
     font-family: "Quicksand", sans-serif;
     font-weight: bold;
     font-size: 3vh;
   }
   .page-5 .box-info,
-.page-7 .box-info {
+  .page-7 .box-info {
     border-top: 5px solid black;
   }
   .page-5 .logo,
-.page-7 .logo {
+  .page-7 .logo {
     height: 20rem;
   }
   .page-5 input,
-.page-7 input {
+  .page-7 input {
     width: 100%;
     font-size: 3vh;
     border-radius: 100rem;
@@ -571,12 +563,12 @@ root {
     color: #ffffff;
   }
   .page-5 .icon,
-.page-7 .icon {
+  .page-7 .icon {
     cursor: pointer;
     width: 4vh;
   }
   .page-5 .buttons,
-.page-7 .buttons {
+  .page-7 .buttons {
     display: flex;
     flex-direction: row;
     font-weight: bold;
@@ -585,7 +577,7 @@ root {
     margin: 1rem 0;
   }
   .page-5 .button,
-.page-7 .button {
+  .page-7 .button {
     border-radius: 100rem;
     border: none;
     outline: none;
@@ -596,7 +588,7 @@ root {
     margin: 0.5rem 1rem;
   }
   .page-5 .discard,
-.page-7 .discard {
+  .page-7 .discard {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -611,19 +603,19 @@ root {
     color: #ffffff;
   }
   .page-5 .icon,
-.page-7 .icon {
+  .page-7 .icon {
     fill: #fff;
   }
   .page-5 .control,
-.page-7 .control {
+  .page-7 .control {
     width: 100%;
   }
   .page-5 .label,
-.page-7 .label {
+  .page-7 .label {
     margin: 2rem 0;
   }
   .page-5 .container,
-.page-7 .container {
+  .page-7 .container {
     flex-direction: column;
     height: 90%;
     justify-content: space-evenly;
@@ -632,41 +624,41 @@ root {
 }
 @media screen and (orientation: landscape) {
   .page-5 .box-info,
-.page-7 .box-info {
+  .page-7 .box-info {
     margin: 1rem;
   }
   .page-5 .container,
-.page-7 .container {
+  .page-7 .container {
     flex-direction: row;
     height: 90%;
     justify-content: space-evenly;
     align-items: center;
   }
   .page-5 .text-bold,
-.page-7 .text-bold {
+  .page-7 .text-bold {
     font-family: "Quicksand", sans-serif;
     font-weight: bold;
     font-size: 3vw;
   }
   .page-5 .logo,
-.page-7 .logo {
+  .page-7 .logo {
     height: 10rem;
   }
   .page-5 .icon,
-.page-7 .icon {
+  .page-7 .icon {
     cursor: pointer;
     width: 4vw;
   }
   .page-5 .control,
-.page-7 .control {
+  .page-7 .control {
     width: 100%;
   }
   .page-5 .label,
-.page-7 .label {
+  .page-7 .label {
     margin: 1rem 0;
   }
   .page-5 .buttons,
-.page-7 .buttons {
+  .page-7 .buttons {
     display: flex;
     flex-direction: row;
     font-weight: bold;
@@ -675,7 +667,7 @@ root {
     margin: 1rem 0;
   }
   .page-5 .button,
-.page-7 .button {
+  .page-7 .button {
     border-radius: 100rem;
     border: none;
     cursor: pointer;
@@ -686,7 +678,7 @@ root {
     margin: 0.5rem 1rem;
   }
   .page-5 .discard,
-.page-7 .discard {
+  .page-7 .discard {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -701,11 +693,11 @@ root {
     color: #ffffff;
   }
   .page-5 .icon,
-.page-7 .icon {
+  .page-7 .icon {
     fill: #fff;
   }
   .page-5 input,
-.page-7 input {
+  .page-7 input {
     width: 100%;
     font-size: 3vw;
     border-radius: 100rem;
