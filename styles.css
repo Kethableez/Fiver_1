@@ -166,7 +166,6 @@ root {
 }
 
 .page-2 {
-  font-size: 2em;
   font-family: "Quicksand", sans-serif;
 }
 
@@ -176,10 +175,11 @@ root {
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .page-2 .text-bold {
-  font-size: 2rem;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -189,7 +189,6 @@ root {
   background-color: rgb(141, 134, 184);
   display: flex;
   width: 80%;
-  padding: 0.7rem 0.5rem;
 
   flex-direction: row;
   justify-content: space-evenly;
@@ -205,26 +204,22 @@ root {
 }
 
 .page-2 .file-control {
-  font-size: 1rem;
   color: #fff;
   font-family: "Quicksand", sans-serif;
   border-radius: 5px;
   font-weight: bold;
-  padding: 1rem 0.5rem;
   background-color: #7168a7;
+  cursor: pointer;
+  text-align: center;
 }
 
 .page-2 .icon {
   color: #fff;
-  margin: 0 0.5rem;
-  font-size: 2.5rem;
 }
 
 .page-2 .input {
   background-color: unset;
   color: #fff;
-  font-size: 1rem;
-  padding: 0.5rem;
   width: 80%;
   font-family: "Quicksand", sans-serif;
   outline: none;
@@ -254,8 +249,56 @@ root {
 }
 
 @media screen and (orientation: portrait) {
+  .page-2 {
+    font-size: 2rem;
+    font-family: "Quicksand", sans-serif;
+  }
+
+  .page-2 .text-bold {
+    font-size: 2rem;
+  }
+
+  .page-2 .control {
+    padding: 0.7rem 0.5rem;
+  }
+  .page-2 .file-control {
+    font-size: 1rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .page-2 .icon {
+    font-size: 2.5rem;
+  }
+
+  .page-2 .input {
+    font-size: 1rem;
+  }
 }
 @media screen and (orientation: landscape) {
+  .page-2 {
+    font-size: 2rem;
+    font-family: "Quicksand", sans-serif;
+  }
+
+  .page-2 .text-bold {
+    font-size: 2rem;
+  }
+
+  .page-2 .control {
+    padding: 0.7rem 0.5rem;
+  }
+  .page-2 .file-control {
+    font-size: 1rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .page-2 .icon {
+    font-size: 2.5rem;
+  }
+
+  .page-2 .input {
+    font-size: 1rem;
+  }
 }
 
 .page-3 {
@@ -373,7 +416,6 @@ root {
 }
 
 .page-4 {
-  font-size: 2em;
   font-family: "Quicksand", sans-serif;
 }
 
@@ -388,10 +430,6 @@ root {
 .page-4 .text-bold {
   text-transform: uppercase;
   font-weight: bold;
-}
-
-.page-4 .header {
-  font-size: 2rem;
 }
 
 .page-4 button {
@@ -416,16 +454,13 @@ root {
   width: 80%;
   flex-direction: row;
   align-items: center;
-  padding: 0.7rem 0.5rem;
 }
 
 .page-4 .button-2 {
   background-color: rgb(141, 134, 184);
   border-radius: 5px;
   color: #fff;
-  font-size: 1.5rem;
   font-family: "Quicksand", sans-serif;
-  padding: 0.25rem 1rem;
   width: fit-content;
 }
 
@@ -451,13 +486,11 @@ root {
   flex-direction: row;
   justify-content: space-between;
   width: 80%;
-  font-size: 1rem;
 }
 
 .row .label {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 0.7rem;
   width: 20%;
 }
 
@@ -468,7 +501,6 @@ root {
 .page-4 .small {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 0.7rem;
   width: fit-content;
 }
 
@@ -483,32 +515,31 @@ root {
 
 .page-4 .icon {
   color: #fff;
-  margin: 0 0.5rem;
-  font-size: 2.5rem;
 }
 
 .page-4 .label-2 {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 1rem;
   width: fit-content;
 }
 
 .page-4 .input {
   background-color: unset;
   color: #fff;
-  font-size: 1rem;
-  padding: 0.5rem;
   width: 80%;
   font-family: "Quicksand", sans-serif;
   outline: none;
   border: none;
 }
 
+.page-4 input::placeholder,
+.page-2 input::placeholder {
+  color: white;
+}
+
 .page-4 .hr {
   border-bottom: 3px solid black;
   width: 50%;
-  height: 1rem;
 }
 
 .page-4 .box {
@@ -526,8 +557,102 @@ root {
 }
 
 @media screen and (orientation: portrait) {
+  .page-4 {
+    font-size: 2rem;
+    font-family: "Quicksand", sans-serif;
+  }
+
+  .page-4 .header {
+    font-size: 2rem;
+  }
+
+  .page-4 .space {
+    height: 2rem;
+  }
+
+  .page-4 .control {
+    padding: 0.7rem 0.5rem;
+  }
+
+  .page-4 .button-2 {
+    font-size: 1.5rem;
+    padding: 0.25rem 1rem;
+  }
+
+  .page-4 .row {
+    font-size: 1rem;
+  }
+
+  .row .label {
+    font-size: 0.7rem;
+  }
+
+  .page-4 .small {
+    font-size: 0.7rem;
+  }
+
+  .page-4 .icon {
+    margin: 0.5rem 0.5rem;
+    font-size: 2.5rem;
+  }
+
+  .page-4 .label-2 {
+    font-size: 1rem;
+  }
+
+  .page-4 .input {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
 }
 @media screen and (orientation: landscape) {
+  .page-4 {
+    font-size: 1.5rem;
+    font-family: "Quicksand", sans-serif;
+  }
+
+  .page-4 .header {
+    font-size: 1.5rem;
+  }
+
+  .page-4 .space {
+    height: 1rem;
+  }
+
+  .page-4 .white-bold {
+    margin: 0.5rem;
+  }
+
+  .page-4 .button-2 {
+    font-size: 1rem;
+    padding: 0.25rem 1rem;
+  }
+
+  .page-4 .row {
+    font-size: 1rem;
+  }
+
+  .row .label {
+    font-size: 0.7rem;
+  }
+
+  .page-4 .small {
+    font-size: 0.5rem;
+  }
+
+  .page-4 .icon {
+    margin: 0.4rem 0.4rem;
+    font-size: 2rem;
+  }
+
+  .page-4 .label-2 {
+    font-size: 1rem;
+  }
+
+  .page-4 .input {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
 }
 
 .page-5,
